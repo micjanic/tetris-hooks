@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 
 import { createStage } from '../gameHelpers'
 
-//styled components
+// Styled Components
 import { StyledTetrisWrapper, StyledTetris } from './styles/StyledTetris'
 
-//custom hooks
+// Custom Hooks
 import { usePlayer } from '../hooks/usePlayer'
 import { useStage } from '../hooks/useStage'
 
-//components
+// Components
 import Stage from './Stage'
 import Display from './Display'
 import StartButton from './StartButton'
@@ -24,11 +24,12 @@ const Tetris = () => {
     console.log('re-render')
 
     const movePlayer = (dir) => {
+        console.log(dir)
         updatePlayerPos({ x: dir, y: 0 })
     }
 
     const startGame = () => {
-        //reset everything
+        // Reset everything
         setStage(createStage())
         resetPlayer()
     }
