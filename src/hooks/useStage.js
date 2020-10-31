@@ -12,7 +12,6 @@ export const useStage = (player, resetPlayer) => {
             )
 
             // Then draw the tetromino
-            console.log('draw')
             player.tetromino.forEach((row, y) => {
                 row.forEach((value, x) => {
                     if (value !== 0) {
@@ -23,10 +22,11 @@ export const useStage = (player, resetPlayer) => {
                     }
                 })
             })
-            // then check if we collided
+            // Then check if we collided
             if (player.collided) {
                 resetPlayer()
             }
+
             return newStage
         }
 
